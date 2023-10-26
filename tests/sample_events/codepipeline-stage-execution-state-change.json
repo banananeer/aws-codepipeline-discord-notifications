@@ -1,0 +1,20 @@
+{
+    "version": "0",
+    "id": "02363384-6dfd-c198-7aea-f6d83f9aa36d",
+    "detail-type": "CodePipeline Stage Execution State Change",
+    "source": "aws.codepipeline",
+    "account": "059237686736",
+    "time": "2023-10-25T20:43:28Z",
+    "region": "us-east-1",
+    "resources": [
+        "arn:aws:codepipeline:us-east-1:059237686736:drf-lab-pipeline"
+    ],
+    "detail": {
+        "pipeline": "drf-lab-pipeline",
+        "execution-id": "78fddce3-fce1-4b95-b472-3224e88a2ac2",
+        "stage": "Build",
+        "state": "STARTED",
+        "version": 1,
+        "pipeline-execution-attempt": 0
+    }
+}

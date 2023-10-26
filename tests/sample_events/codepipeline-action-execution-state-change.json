@@ -1,0 +1,57 @@
+{
+    "version": "0",
+    "id": "667cefad-db13-aebf-56e6-665ce02a7a2f",
+    "detail-type": "CodePipeline Action Execution State Change",
+    "source": "aws.codepipeline",
+    "account": "059237686736",
+    "time": "2023-10-25T20:46:29Z",
+    "region": "us-east-1",
+    "resources": [
+        "arn:aws:codepipeline:us-east-1:059237686736:drf-lab-pipeline"
+    ],
+    "detail": {
+        "pipeline": "drf-lab-pipeline",
+        "execution-id": "78fddce3-fce1-4b95-b472-3224e88a2ac2",
+        "stage": "Build",
+        "execution-result": {
+            "external-execution-url": "https://console.aws.amazon.com/codebuild/home?region=us-east-1#/builds/drf-lab:17363feb-6d2d-4f1e-89c7-f3a450276cfb/view/new",
+            "external-execution-id": "drf-lab:17363feb-6d2d-4f1e-89c7-f3a450276cfb"
+        },
+        "input-artifacts": [
+            {
+                "name": "source_output",
+                "s3location": {
+                    "bucket": "drf-lab-codepipeline",
+                    "key": "drf-lab-pipeline/source_out/VZGbZEu"
+                }
+            }
+        ],
+        "output-artifacts": [
+            {
+                "name": "DefinitionArtifact",
+                "s3location": {
+                    "bucket": "drf-lab-codepipeline",
+                    "key": "drf-lab-pipeline/Definition/T3U25qO"
+                }
+            },
+            {
+                "name": "ImageArtifact",
+                "s3location": {
+                    "bucket": "drf-lab-codepipeline",
+                    "key": "drf-lab-pipeline/ImageArtif/QgGGbYT"
+                }
+            }
+        ],
+        "action": "Build",
+        "state": "SUCCEEDED",
+        "region": "us-east-1",
+        "type": {
+            "owner": "AWS",
+            "provider": "CodeBuild",
+            "category": "Build",
+            "version": "1"
+        },
+        "version": 1,
+        "pipeline-execution-attempt": 1
+    }
+}

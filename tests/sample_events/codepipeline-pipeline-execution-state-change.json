@@ -1,0 +1,23 @@
+{
+    "version": "0",
+    "id": "2d6c5361-06c9-d7c4-6423-ae3122ced3fb",
+    "detail-type": "CodePipeline Pipeline Execution State Change",
+    "source": "aws.codepipeline",
+    "account": "059237686736",
+    "time": "2023-10-25T20:43:24Z",
+    "region": "us-east-1",
+    "resources": [
+        "arn:aws:codepipeline:us-east-1:059237686736:drf-lab-pipeline"
+    ],
+    "detail": {
+        "pipeline": "drf-lab-pipeline",
+        "execution-id": "78fddce3-fce1-4b95-b472-3224e88a2ac2",
+        "execution-trigger": {
+            "trigger-type": "Webhook",
+            "trigger-detail": "arn:aws:codestar-connections:us-east-1:059237686736:connection/e63a84d9-0c94-421e-9162-7cd8de5c032b"
+        },
+        "state": "STARTED",
+        "version": 1,
+        "pipeline-execution-attempt": 1
+    }
+}
