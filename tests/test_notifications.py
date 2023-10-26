@@ -1,12 +1,13 @@
 import responses
 from responses.matchers import json_params_matcher
 
-from notifications import lambda_handler
+from index import handler
 
 
 def test_action_execution_state_change_notification(
-    action_execution_state_change_json, lambda_context, discord_webhook_url
+    action_execution_state_change_json, lambda_context, discord_webhook_url, mocker
 ):
+    mocker.patch("index.client.delete_message")
     responses.add(
         method=responses.POST,
         url=discord_webhook_url,
@@ -23,12 +24,13 @@ def test_action_execution_state_change_notification(
             )
         ],
     )
-    lambda_handler(action_execution_state_change_json, lambda_context)
+    handler(action_execution_state_change_json, lambda_context)
 
 
 def test_pipeline_execution_state_change_notification(
-    pipeline_execution_state_change_json, lambda_context, discord_webhook_url
+    pipeline_execution_state_change_json, lambda_context, discord_webhook_url, mocker
 ):
+    mocker.patch("index.client.delete_message")
     responses.add(
         method=responses.POST,
         url=discord_webhook_url,
@@ -45,12 +47,13 @@ def test_pipeline_execution_state_change_notification(
             )
         ],
     )
-    lambda_handler(pipeline_execution_state_change_json, lambda_context)
+    handler(pipeline_execution_state_change_json, lambda_context)
 
 
 def test_stage_execution_state_change_notification(
-    stage_execution_state_change_json, lambda_context, discord_webhook_url
+    stage_execution_state_change_json, lambda_context, discord_webhook_url, mocker
 ):
+    mocker.patch("index.client.delete_message")
     responses.add(
         method=responses.POST,
         url=discord_webhook_url,
@@ -67,4 +70,4 @@ def test_stage_execution_state_change_notification(
             )
         ],
     )
-    lambda_handler(stage_execution_state_change_json, lambda_context)
+    handler(stage_execution_state_change_json, lambda_context)
